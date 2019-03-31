@@ -59,8 +59,8 @@ type Hogefuga interface {
 type hogefuga struct {
 }
 
-func NewHogefuga() Hogefuga {
-	return &hogefuga{}
+func NewHogefuga() Hogefuga { // Hogefugaを返す
+	return &hogefuga{} // 実際に返すのはhogefuga
 }
 
 func (h *hogefuga) getHoge() string {
@@ -125,7 +125,7 @@ func main() {
 	printFuga2(hf)
 
 	hf2 := &hogefuga2{}
-	// hogefuga2はgetFuga等を実装していない
+	// hogefuga2はインターフェースを埋め込んだだけで、getHoge2とgetFugaを実装していない
 	// 以下の２つだけをテストしたい場合などのモックであればそれでいい
 	printHoge(hf2)
 	printFuga2(hf2)
