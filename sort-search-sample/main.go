@@ -117,6 +117,22 @@ func main() {
 	fmt.Printf("returnIndex --> %v\n", i)
 	printResult(isFound, items, i)
 
+	// string 比較
+	fmt.Println(`"abc" > "abd"`)
+	fmt.Println("abc" > "abd")
+	fmt.Println(`"abc" > "aba"`)
+	fmt.Println("abc" > "aba")
+	fmt.Println(`"abc" > "abc"`)
+	fmt.Println("abc" > "abc")
+	fmt.Println(`"abc" >= "abc"`)
+	fmt.Println("abc" >= "abc")
+	fmt.Println(`"abc" > "abbzzzzzz"`)
+	fmt.Println("abc" > "abbzzzzzz")
+	fmt.Println(`"zaa" > "abb"`)
+	fmt.Println("zaa" > "abb")
+	fmt.Println(`"azzzzzzzzz" > "b"`)
+	fmt.Println("azzzzzzzzz" > "b")
+
 	/*
 		sort package
 		http://golang.jp/pkg/sort
@@ -148,5 +164,20 @@ func main() {
 		searchItem --> { 1000 1000}
 		returnIndex --> 6
 		not found
+
+		"abc" > "abd"
+		false
+		"abc" > "aba"
+		true
+		"abc" > "abc"
+		false
+		"abc" >= "abc"
+		true
+		"abc" > "abbzzzzzz"
+		true
+		"zaa" > "abb"
+		true
+		"azzzzzzzzz" > "b"
+		false
 	*/
 }
